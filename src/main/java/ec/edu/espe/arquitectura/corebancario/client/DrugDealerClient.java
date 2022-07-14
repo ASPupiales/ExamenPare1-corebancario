@@ -13,7 +13,7 @@ public class DrugDealerClient {
   @Getter private final RestTemplate restTemplate;
 
   public DrugDealerClient(@Value("${dealer.c.url}") String baseUrl) {
-    this.baseUrl = baseUrl + "/products/all";
+    this.baseUrl = baseUrl + "/dealer/{fullName}";
     this.restTemplate = new RestTemplate(getClientHttpRequestFactory());
   }
 
